@@ -1,0 +1,311 @@
+/*********
+**************** Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*********
+************** Variables */
+:root {
+  --main-bg-color: #fff;
+  --main-text-color: hsl(193, 97%, 50%);
+  --secondary-text-color: hsl(210, 93%, 49%);
+}
+
+/*********
+**************** Fonts */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*********
+**************** Main Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  color: var(--main-text-color);
+  height: 60px;
+  font-size: 2vw;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+}
+
+/*********
+************* Button Styles */
+.btnHeader {
+  background-color: var(--main-bg-color);
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  color: var(--main-text-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.btnHeader:hover {
+  font-size: 100%;
+}
+
+.btn {
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+  background-color: var(--secondary-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+}
+/*********
+**************** Main Styles */
+
+#mainDiv {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+}
+
+#questionDisplay {
+  text-align: center;
+  align-self: baseline;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 5;
+  place-self: center;
+  font-size: 30px;
+}
+
+#finalScoreDisplay {
+  grid-column: 1 / span 2;
+  grid-row: 6 / span 1;
+  font-size: 15px;
+}
+
+#enterInitials {
+  grid-column: 1 / span 1;
+  grid-row: 7 / span 1;
+  font-size: 15px;
+}
+
+#enterInitialsTextArea {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+  font-size: 15px;
+  resize: none;
+}
+
+#submitScore {
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 1;
+  padding: 10px;
+  border-radius: 10%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+#start-quiz {
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 1;
+  padding: 20px;
+  border-radius: 4%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  place-self: center;
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+#answer1 {
+  grid-column: 1 / span 2;
+  grid-row: 6 / span 1;
+  padding: 10px;
+  border-radius: 10%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  /* margin-left: 25px; */
+}
+
+#answer2 {
+  grid-column: 1 / span 2;
+  grid-row: 7 / span 1;
+  padding: 10px;
+  border-radius: 10%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  /* margin-left: 25px; */
+}
+
+#answer3 {
+  grid-column: 1 / span 2;
+  grid-row: 8 / span 1;
+  padding: 10px;
+  border-radius: 10%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  /* margin-left: 25px; */
+}
+
+#answer4 {
+  grid-column: 1 / span 2;
+  grid-row: 9 / span 1;
+  padding: 10px;
+  border-radius: 10%;
+  border: 0;
+  outline: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  /* margin-left: 25px; */
+}
+
+#answer1:hover {
+  background-color: var(--secondary-text-color);
+}
+
+#answer2:hover {
+  background-color: var(--secondary-text-color);
+}
+
+#answer3:hover {
+  background-color: var(--secondary-text-color);
+}
+
+#answer4:hover {
+  background-color: var(--secondary-text-color);
+}
+
+#submitScore:hover {
+  background-color: var(--secondary-text-color);
+}
+
+#answerCorrectWrongGrid {
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+}
+
+#answerCorrectWrong {
+  text-align: left;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+}
+
+/*********
+**************** Media Queries */
+@media screen and (max-width: 768px) {
+  #answer1:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer2:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer3:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer4:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #submitScore:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #questionDisplay {
+    font-size: 25px;
+  }
+
+  #answer1 {
+    grid-column: 2 / span 2;
+  }
+
+  #answer2 {
+    grid-column: 2 / span 2;
+  }
+
+  #answer3 {
+    grid-column: 2 / span 2;
+  }
+
+  #answer4 {
+    grid-column: 2 / span 2;
+  }
+}
+
+/*********
+**************** Additional Media Styles */
+@media screen and (max-width: 575px) {
+  #answer1:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer2:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer3:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #answer4:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #submitScore:hover {
+    background-color: var(--main-text-color);
+  }
+
+  #mainDiv {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #questionDisplay {
+    grid-column: 2 / span 2;
+    font-size: 15px;
+  }
+}
